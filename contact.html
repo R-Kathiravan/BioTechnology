@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About || BioTechnology</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="shared.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header" class="reveal-section">
+        <div class="header-cls">
+            <a href="index.html" class="head-logo">
+                <img src="./assets/stackly-cyan-grad-orig.webp" alt="Logo" class="logo reveal-image">
+            </a>
+            <nav class="nav-links" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Service</a>
+                <a href="contact.html" class="nav-active">Contact</a>
+                <div class="close-btn material-icons" id="closeMenu">close</div>
+                <div class="nav-actions mob-view">
+                    <a href="login.html" class="btn btn-gradient">Login</a>
+                </div>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-gradient">Login</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <section class="sub-hero">
+        <div class="sub-hero-bg"></div>
+        <div class="sub-hero-content">
+            <div class="chips dark-chips">
+                <span class="material-icons">mail</span> Contact Us
+            </div>
+            <h1 class="sec-head">Partner with our <span class="text-gradient">clinical experts</span></h1>
+            <p class="sec-desc">Reach out to discuss your specific clinical requirements, request an audit, or initiate
+                a new research
+                partnership.</p>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <div class="contact-info scroll-reveal" style="--delay: 0.1s;">
+                <h2 class="contact-title sec-head">Get in touch with our <br><span class="text-gradient">laboratory
+                        team</span>
+                </h2>
+                <p class="contact-subtitle sec-desc">Whether you are initiating a clinical trial or requesting an audit,
+                    our
+                    specialists are ready to assist.</p>
+
+                <div class="info-blocks">
+                    <div class="info-item" data-aos="flip-up" data-aos-delay="200">
+                        <div class="info-icon"><span class="material-icons">biotech</span></div>
+                        <div class="info-text">
+                            <h4>Clinical Partnerships</h4>
+                            <a href="404page.html">partners@thestackly.com</a>
+                            <a href="404page.html">+91 9876543210</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item" data-aos="flip-up" data-aos-delay="300">
+                        <div class="info-icon"><span class="material-icons">help_outline</span></div>
+                        <div class="info-text">
+                            <h4>General Inquiries</h4>
+                            <a href="404page.html">info@thestackly.com</a>
+                            <a href="404page.html">+91 9876543210</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item" data-aos="flip-up" data-aos-delay="400">
+                        <div class="info-icon"><span class="material-icons">location_on</span></div>
+                        <div class="info-text">
+                            <h4>Main Headquarters</h4>
+                            <p>Stackly Phase 1<br>Salem, TN 636001</p>
+                            <a href="404page.html" class="text-link">View on Maps <span
+                                    class="material-icons">arrow_forward</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper glass-card scroll-reveal" style="--delay: 0.3s;">
+                <form id="clinical-contact-form" class="clinical-form" novalidate>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" placeholder="Dr. Jane Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="workEmail">Work Email *</label>
+                            <input type="email" id="workEmail" placeholder="jane@institution.edu" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="company">Institution / Company *</label>
+                            <input type="text" id="company" placeholder="Apex Therapeutics" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="inquiryType">Inquiry Type *</label>
+                            <select id="inquiryType" required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="biomarker">Biomarker Analysis</option>
+                                <option value="genomic">Genomic Sequencing</option>
+                                <option value="audit">Regulatory Audit</option>
+                                <option value="investor">Investor Relations</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Please provide high-level details about your timeline and assay requirements..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gradient submit-btn">Send Secure Message <span
+                            class="material-icons">send</span></button>
+
+                    <div id="form-status" class="form-status-message"></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <section class="location">
+        <div class="section-header">
+            <div class="chips"><span class="material-icons">bloodtype</span> Our Location</div>
+            <h1 class="sec-head">Find our laboratory
+                <span class="text-gradient"> Location</span>
+            </h1>
+            <div class="sec-desc">
+                Get in touch with GymPro to learn more about our programs, memberships, and training options. Our team
+                is here to answer your questions and help you take first step
+            </div>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616098770783!2d78.17140487459903!3d11.68295658852636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1773656950877!5m2!1sen!2sin"
+            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="global-network-section">
+        <div class="network-container text-center scroll-reveal">
+            <div class="section-header">
+                <div class="chips dark-chips" style="margin: 0 auto 24px auto;"><span
+                        class="material-icons">public</span>
+                    Global Reach</div>
+                <h3 class="sec-head">Operating worldwide to support your <span class="text-gradient"> multi-site
+                        clinical trials.</span></h3>
+            </div>
+            <div class="network-stats">
+                <div class="stat" data-aos="flip-down">
+                    <h2 class="text-gradient">14+</h2>
+                    <p>Countries Served</p>
+                </div>
+                <div class="stat" data-aos="flip-up">
+                    <h2 class="text-gradient">3</h2>
+                    <p>Processing Hubs</p>
+                </div>
+                <div class="stat" data-aos="flip-down">
+                    <h2 class="text-gradient">24/7</h2>
+                    <p>Sample Tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <div class="chips dark-chips"><span class="material-icons">help_outline</span> Need Answers?</div>
+                <h1 class="sec-head">Frequently Asked <span class="text-gradient">Questions</span></h1>
+                <p class="sec-desc">Clear, transparent information about our lab processes and compliance standards.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>What is your turnaround time for clinical biomarker analysis?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Our standard turnaround time is 5-7 business days from sample receipt. However, expedited
+                                processing is available for urgent clinical trials depending on the assay complexity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How do you ensure data security and HIPAA compliance?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>All data is encrypted end-to-end using AES-256 protocols. Our lab infrastructure and
+                                software are fully HIPAA and GDPR compliant, subjected to routine third-party security
+                                audits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can your facility handle high-throughput genomic sequencing?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Yes. We operate state-of-the-art automated sequencing platforms capable of processing
+                                thousands of samples weekly without compromising analytical precision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>What is your turnaround time for clinical biomarker analysis?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Our standard turnaround time is 5-7 business days from sample receipt. However, expedited
+                                processing is available for urgent clinical trials depending on the assay complexity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How do you ensure data security and HIPAA compliance?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>All data is encrypted end-to-end using AES-256 protocols. Our lab infrastructure and
+                                software are fully HIPAA and GDPR compliant, subjected to routine third-party security
+                                audits.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can your facility handle high-throughput genomic sequencing?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            <p>Yes. We operate state-of-the-art automated sequencing platforms capable of processing
+                                thousands of samples weekly without compromising analytical precision.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="cta-grid-bg"></div>
+
+        <div class="cta-glass-box" data-aos="fade-down">
+            <div class="chips dark-chips"><span class="material-icons">biotech</span> Start Your Research</div>
+            <h2 class="sec-head">Accelerate your clinical <span class="text-gradient">breakthroughs</span></h2>
+            <p class="sec-desc">Partner with a laboratory that prioritizes precision, speed, and strict regulatory
+                compliance from sample
+                to final data.</p>
+
+            <div class="cta-buttons">
+                <a href="404page.html" class="btn-gradient">Request a Consultation</a>
+                <a href="404page.html" class="btn-outline">Download Lab Specs</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="biotech-footer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./assets/stackly-cyan-grad-orig.webp" alt="Logo" class="logo">
+                    <p>Next-generation laboratory services and precision biomarker analysis for innovators worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="404page.html"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="500">
+                    <h4>Quick Licks</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="404page.html">Genomic Sequencing</a></li>
+                        <li><a href="404page.html">Biomarker Analysis</a></li>
+                        <li><a href="404page.html">Assay Development</a></li>
+                        <li><a href="404page.html">Data Bioinformatics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="600">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest peer-reviewed research and regulatory news delivered to your inbox.</p>
+
+                    <form id="newsletter-form" class="newsletter-form" novalidate>
+                        <input type="email" id="email-input" placeholder="Work email address" required>
+                        <button type="submit" class="btn-submit"><span
+                                class="material-icons">arrow_forward</span></button>
+                    </form>
+
+                    <div id="form-message" class="form-message"></div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="300">
+                <p>&copy; 2026 Stackly. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">HIPAA Compliance</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            // offset: 100
+        });
+    </script>
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('clinical-contact-form');
+            const statusMessage = document.getElementById('form-status');
+
+            const inputs = {
+                name: document.getElementById('fullName'),
+                email: document.getElementById('workEmail'),
+                company: document.getElementById('company'),
+                type: document.getElementById('inquiryType'),
+                message: document.getElementById('message')
+            };
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                Object.values(inputs).forEach(input => input.classList.remove('input-error', 'input-success'));
+                statusMessage.className = 'form-status-message';
+
+                let hasError = false;
+                let errorMessage = '';
+
+                Object.values(inputs).forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('input-error');
+                        hasError = true;
+                        errorMessage = 'Please fill out all required fields.';
+                    } else {
+                        input.classList.add('input-success');
+                    }
+                });
+
+                if (inputs.email.value.trim() && !emailRegex.test(inputs.email.value.trim())) {
+                    inputs.email.classList.add('input-error');
+                    inputs.email.classList.remove('input-success');
+                    hasError = true;
+                    errorMessage = 'Please enter a valid work email address.';
+                }
+
+                if (hasError) {
+                    statusMessage.textContent = errorMessage;
+                    statusMessage.classList.add('error', 'visible');
+                } else {
+                    window.location.href = '404page.html'
+                    statusMessage.classList.add('success', 'visible');
+
+                    setTimeout(() => {
+                        form.reset();
+                        Object.values(inputs).forEach(input => input.classList.remove('input-success'));
+                        statusMessage.classList.remove('visible');
+                    }, 4000);
+                }
+            });
+
+            Object.values(inputs).forEach(input => {
+                input.addEventListener('input', () => {
+                    input.classList.remove('input-error');
+                    statusMessage.classList.remove('visible');
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionButton = item.querySelector('.faq-question');
+
+                questionButton.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

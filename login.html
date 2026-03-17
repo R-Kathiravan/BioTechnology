@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication || Stackly BioTechnology</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="shared.css">
+</head>
+
+<body class="auth-body">
+
+    <a href="index.html" class="btn btn-primary back">Back to home</a>
+    <div class="auth-bg-glow"></div>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+
+            <div id="login-view" class="auth-view active-view">
+                <div class="auth-header">
+                    <a href="index.html"><img src="./assets/stackly-cyan-grad-orig.webp" alt="logo" class="logo"></a>
+                    <h2>Welcome <span class="text-gradient">Back</span></h2>
+                    <p>Login to access your clinical dashboard</p>
+                </div>
+
+                <form id="login-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="login-role">Login As</label>
+                        <select id="login-role" required>
+                            <option value="researcher">Researcher</option>
+                            <option value="patient">Patient / Subject</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="you@institution.edu" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="********" required minlength="8">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <span>Remember Me</span>
+                        </label>
+                        <a href="#" class="text-link" onclick="switchView('forgot-view')">Forgot Password?</a>
+                    </div>
+                    <div class="auth-status-message" id="login-status"></div>
+                    <button type="submit" class="btn-gradient submit-btn">Login Securely</button>
+
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="#" onclick="switchView('signup-view')">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="signup-view" class="auth-view">
+                <div class="auth-header">
+                    <a href="index.html"><img src="./assets/stackly-cyan-grad-orig.webp" alt="logo" class="logo"></a>
+                    <h2>Create <span class="text-gradient">New Account</span></h2>
+                    <p>Join the global laboratory network</p>
+                </div>
+
+                <form id="signup-form" class="auth-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Dr.John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-role">Role</label>
+                            <select id="signup-role" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="patient">Patient</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Work Email</label>
+                        <input type="email" id="signup-email" placeholder="jane@institution.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-org">Organization</label>
+                        <input type="text" id="signup-org" placeholder="Apex Therapeutics" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Min 8 chars" required
+                                minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm">Confirm</label>
+                            <input type="password" id="signup-confirm" placeholder="Repeat password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-options" style="justify-content: flex-start; margin-bottom: 24px;">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="terms-agree" required>
+                            <span>I agree to the <a href="404page.html">Terms</a> & <a href="404page.html">Privacy
+                                    Policy</a></span>
+                        </label>
+                    </div>
+                    <div class="auth-status-message" id="signup-status"></div>
+                    <button type="submit" class="btn-gradient submit-btn">Create Account</button>
+
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#" onclick="switchView('login-view')">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="forgot-view" class="auth-view">
+                <div class="auth-header">
+                    <span class="material-icons logo-icon">lock_reset</span>
+                    <h2>Reset <span class="text-gradient">Password</span></h2>
+                    <p>Enter your email to receive a secure reset link.</p>
+                </div>
+
+                <form id="forgot-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="forgot-email">Registered Email Address</label>
+                        <input type="email" id="forgot-email" placeholder="you@institution.edu" required>
+                    </div>
+                    <div class="auth-status-message" id="forgot-status"></div>
+                    <button type="submit" class="btn-gradient submit-btn">Send Recovery Link</button>
+
+                    <div class="auth-footer" style="margin-top: 24px;">
+                        <a href="#" onclick="switchView('login-view')" class="text-link"><span class="material-icons"
+                                style="font-size: 1rem; vertical-align: middle;">arrow_back</span> Back to Login</a>
+                    </div>
+                </form>
+            </div>
+
+            <div id="auth-status" class="auth-status-message"></div>
+
+        </div>
+    </div>
+
+    <script>
+        function switchView(viewId) {
+            document.querySelectorAll('.auth-view').forEach(view => {
+                view.classList.remove('active-view');
+            });
+            document.getElementById(viewId).classList.add('active-view');
+            document.querySelectorAll('.auth-status-message').forEach(box => {
+                box.className = 'auth-status-message';
+                box.textContent = '';
+            });
+            document.querySelectorAll('.input-error').forEach(input => {
+                input.classList.remove('input-error');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            function showError(inputElement, statusBoxId, msg) {
+                if (inputElement) inputElement.classList.add('input-error');
+                const statusBox = document.getElementById(statusBoxId);
+                if (statusBox) {
+                    statusBox.textContent = msg;
+                    statusBox.className = 'auth-status-message error visible';
+                }
+            }
+
+            function showSuccess(statusBoxId, msg) {
+                const statusBox = document.getElementById(statusBoxId);
+                if (statusBox) {
+                    statusBox.textContent = msg;
+                    statusBox.className = 'auth-status-message success visible';
+                }
+
+
+            }
+
+            document.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('input', function () {
+                    this.classList.remove('input-error');
+                    const form = this.closest('form');
+                    if (form) {
+                        const statusBox = form.querySelector('.auth-status-message');
+                        if (statusBox) statusBox.classList.remove('visible');
+                    }
+                });
+            });
+
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById('login-email');
+                    const password = document.getElementById('login-password');
+
+                    if (!email.value || !emailRegex.test(email.value)) {
+                        return showError(email, 'login-status', 'Please enter a valid email address.');
+                    }
+                    if (password.value.length < 8) {
+                        return showError(password, 'login-status', 'Password must be at least 8 characters.');
+                    }
+                    const selectedRole = document.getElementById("login-role").value;
+                    console.log(selectedRole);
+                    if(selectedRole=='researcher'){
+                        window.location.href='researcher-dashboard.html'
+                        sessionStorage.setItem("researcher",email.value)
+                    }
+                    else if(selectedRole=='patient'){
+                        window.location.href='patient-dashboard.html'
+                        sessionStorage.setItem("patient",email.value)
+                    }
+                    else{
+                        window.location.href='404page.html'
+                    }
+                });
+            }
+
+            const signupForm = document.getElementById('signup-form');
+            if (signupForm) {
+                signupForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('signup-name');
+                    const email = document.getElementById('signup-email');
+                    const role = document.getElementById('signup-role');
+                    const password = document.getElementById('signup-password');
+                    const confirm = document.getElementById('signup-confirm');
+                    const terms = document.getElementById('terms-agree');
+
+                    if (!name.value.trim()) return showError(name, 'signup-status', 'Full name is required.');
+                    if (!role.value) return showError(role, 'signup-status', 'Please select a role.');
+                    if (!emailRegex.test(email.value)) return showError(email, 'signup-status', 'Valid email required.');
+
+                    if (password.value.length < 8) {
+                        return showError(password, 'signup-status', 'Password must be at least 8 characters long.');
+                    }
+                    if (password.value !== confirm.value) {
+                        showError(password, 'signup-status', 'Passwords do not match.');
+                        return showError(confirm, 'signup-status', 'Passwords do not match.');
+                    }
+                    if (!terms.checked) {
+                        return showError(null, 'signup-status', 'You must agree to the Terms & Privacy Policy.');
+                    }
+
+                    window.location.href = '404page.html'
+                });
+            }
+
+            const forgotForm = document.getElementById('forgot-form');
+            if (forgotForm) {
+                forgotForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById('forgot-email');
+
+                    if (!email.value || !emailRegex.test(email.value)) {
+                        return showError(email, 'forgot-status', 'Please enter a valid registered email.');
+                    }
+                    window.location.href = '404page.html'
+                    email.value = '';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
