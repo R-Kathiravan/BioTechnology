@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404page || BioTechnology</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shared.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link
@@ -57,7 +56,7 @@
 
         .btn-home {
             display: inline-block;
-            margin-top: 20px;
+            /* margin-top: 20px; */
             padding: 14px 32px;
             background-color: #2E7D32;
             color: white;
@@ -72,6 +71,14 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
         }
+
+        .error-actions {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            height: fit-content;
+        }
     </style>
     <section class="error-section">
         <div class="error-content">
@@ -83,9 +90,10 @@
                 <p class="sec-desc">The page you are looking for might have been harvested, moved, or is no longer
                     available. Let's get you back to planting good ideas.</p>
             </div>
-
-            <a href="index.html" class="btn-home">Return to Homepage</a>
-
+            <div class="error-actions">
+                <a href="index.html" class="btn-home">Return to Home</a>
+                <button class="btn-primary" onclick="history.back()">Return to Previous page</button>
+            </div>
         </div>
     </section>
     <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>

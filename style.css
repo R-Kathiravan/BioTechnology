@@ -771,6 +771,9 @@
     .choose-card-con img {
         display: none;
     }
+    .choose-us-overlay{
+        right: 0;
+    }
 }
 
 .case-study-grid {

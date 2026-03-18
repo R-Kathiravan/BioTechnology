@@ -231,6 +231,9 @@ body.auth-body {
     .auth-card {
         padding: 32px 24px;
     }
+    body.auth-body {
+        height: auto;
+    }
 }
 
 .form-message {
