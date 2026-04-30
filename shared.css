@@ -38,6 +38,7 @@
     --radius-glass: 16px;
     --font-primary: 'Inter', system-ui, sans-serif;
     --font-mono: 'Roboto Mono', monospace;
+    --font-heading: 'Playwrite NO', cursive;
     --transition-fast: 0.2s ease-in-out;
     --glow-shadow: 0 0 10px rgba(0, 212, 255, 0.4),
         0 0 20px rgba(0, 212, 255, 0.2),
@@ -242,6 +243,8 @@ img {
 
 #header.fixed {
     background-color: var(--bg-light);
+         animation: FadeDown 0.5s ease forwards;
+         box-shadow: var(--shadow-neon);
 }
 
 #header.fixed .header-cls {
@@ -261,12 +264,25 @@ img {
     filter: invert(0);
 }
 
+ @keyframes FadeDown {
+     from {
+         opacity: 0;
+         transform: translateY(-30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+
 .header-cls {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
 
 .logo {
@@ -283,17 +299,35 @@ img {
     transition: all 0.4s ease;
     color: var(--clr-text-dark);
     font-size: 16px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-linear, var(--clr-accent));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.nav-active::after {
+    width: 100%;
 }
 
 .nav-links a:hover {
     color: var(--clr-accent);
-    transform: scale(1.06);
 }
 
 .nav-active {
     color: var(--clr-accent) !important;
     transform: scale(1.06);
     font-weight: 500;
+    font-family: var(--font-heading);
 }
 
 .hamburger {
@@ -453,6 +487,8 @@ header,
 
 .section-header .sec-head {
     font-size: 2.6rem;
+    font-family: var(--font-heading) !important;
+
 }
 
 .cta-section {
