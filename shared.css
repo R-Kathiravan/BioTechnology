@@ -243,8 +243,8 @@ img {
 
 #header.fixed {
     background-color: var(--bg-light);
-         animation: FadeDown 0.5s ease forwards;
-         box-shadow: var(--shadow-neon);
+    animation: FadeDown 0.5s ease forwards;
+    box-shadow: var(--shadow-neon);
 }
 
 #header.fixed .header-cls {
@@ -264,17 +264,17 @@ img {
     filter: invert(0);
 }
 
- @keyframes FadeDown {
-     from {
-         opacity: 0;
-         transform: translateY(-30px);
-     }
+@keyframes FadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
 
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 .header-cls {
@@ -899,4 +899,11 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
     pointer-events: none;
+}
+
+@media (max-width:768px) {
+    .section-header {
+        align-items: center !important;
+        text-align: center !important;
+    }
 }
